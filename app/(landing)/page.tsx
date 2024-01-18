@@ -1,4 +1,4 @@
-import MaxWidthWrapper from "@/components/maxWidthWrapper";
+import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
 

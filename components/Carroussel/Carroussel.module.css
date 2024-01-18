@@ -1,0 +1,43 @@
+/* Carroussel styles */
+.carouselContainer {
+    position: relative;
+  }
+  
+  .carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carouselItems {
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .carouselItem {
+    flex: 0 0 20%;
+    transition: transform 0.5s ease;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  
+  .carouselItem img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  
+  .active {
+    transform: scale(1.1);
+  }
+  
+  .buttons:hover {
+    cursor: 'pointer';
+  }
+
+  

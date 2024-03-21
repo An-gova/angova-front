@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="overflow-hidden">
-      <body className={inter.className}>
+      <body className={inter.className  + " h-auto bg-gray-100"}>
         <div>{children}</div>
       </body>
     </html>

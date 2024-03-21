@@ -14,8 +14,8 @@ import flags from "../lib/flags.json";
 const Dropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
+    <DropdownMenu >
+      <DropdownMenuTrigger asChild className="ml-4 w-20 sm:w-40">
         <Button variant="nav" className="bg-white">
           <Image
             src={"/flags/squared/fr.png"}
@@ -32,20 +32,22 @@ const Dropdown = () => {
           </span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="mt-2 w-40">
+      <DropdownMenuContent className="mt-2 w-2 sm:w-40">
         <DropdownMenuGroup>
           {flags.map((flag, index) => (
             <DropdownMenuItem key={index}>
-              <div className="flex items-center space-x-2 cursor-pointer py-2 text-sm text-gray-700 dark:text-gray-400">
+              <div className="flex items-end justify-center space-x-2 cursor-pointer py-2 text-sm text-gray-700 dark:text-gray-400 w-full">
                 <Image src={flag.flag} alt={flag.name} width={24} height={24} />
-                <span>{flag.name}</span>
+                <div className="hidden sm:block w-full text-start">
+                  <span className="hidden sm:block ml-4">{flag.name}</span>
+                </div>    
               </div>
             </DropdownMenuItem>
           ))}
         </DropdownMenuGroup>
       </DropdownMenuContent>
-    </DropdownMenu>
-  );
-};
+    </DropdownMenu >
+  )
+}
 
 export default Dropdown;
